@@ -17,17 +17,16 @@ public class waypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x == wayPoints[currentWayPoint].transform.position.x)
+        if (transform.position.x == wayPoints[currentWayPoint].transform.position.x) // Index out of range here???
         {
+         
             if (currentWayPoint == 0)
             {
                 currentWayPoint = 1;
-                transform.Rotate(new Vector3(0, 180, 0));
             }
             else
             {
                 currentWayPoint = 0;
-                transform.Rotate(new Vector3(0, 180, 0));
             }
 
         }
