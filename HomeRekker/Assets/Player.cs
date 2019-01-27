@@ -32,21 +32,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isJumping = false;
-
-        // Level Spawn Locations and End Screen
-        if (collision.gameObject.tag == "houseOne")
-        {
-            this.transform.position = levelTwoSpawn; // Change position to spawn at level 2
-        }
-        else if (collision.gameObject.tag == "houseTwo")
-        {
-            this.transform.position = levelThreeSpawn; // Change position to spawn at level 3
-        }
-        else if (collision.gameObject.tag == "houseThree")
-        {
-            // Win game screen???
-        }
+            isJumping = false;
     }
 
     // Update is called once per frame
@@ -103,4 +89,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "houseOne")
+        {
+            this.transform.position = levelTwoSpawn;
+        }
+        else if (collision.gameObject.tag == "houseTwo")
+        {
+            this.transform.position = levelThreeSpawn;
+        }
+        else if (collision.gameObject.tag == "houseThree")
+        {
+            // Win game????
+        }
+    }
 }

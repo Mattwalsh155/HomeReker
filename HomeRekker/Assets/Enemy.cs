@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour //----- MAKE A bullet TAG FOR THE BULLET-----//
+public class Enemy : MonoBehaviour
 {
     public GameObject[] wayPoints;
     private int currentWayPoint = 0;
@@ -51,18 +51,5 @@ public class Enemy : MonoBehaviour //----- MAKE A bullet TAG FOR THE BULLET-----
 
         }
         transform.position = Vector2.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, speed);
-    }
-
-    // Bullet collision for killing the enemy
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-
-        // Level Spawn Locations and End Screen
-        if (collision.gameObject.tag == "bullet")
-        {
-            Destroy(this.gameObject);
-        }
-
     }
 }
