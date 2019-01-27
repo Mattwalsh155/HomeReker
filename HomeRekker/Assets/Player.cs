@@ -26,9 +26,9 @@ public class Player : MonoBehaviour
 
     }
 
-     private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor")
         {
             isJumping = false;
         }
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
         player.velocity = new Vector2(xVelocity, player.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
+        if (Input.GetKeyDown(KeyCode.Space)&& isJumping == false)
         {
             isJumping = true;
             player.AddForce(Vector2.up * 5000);
