@@ -7,6 +7,9 @@ TagManager:
   - Floor
   - enemy
   - waypoint
+  - houseOne
+  - houseTwo
+  - houseThree
   layers:
   - Default
   - TransparentFX
