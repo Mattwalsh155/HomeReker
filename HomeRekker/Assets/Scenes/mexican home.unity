@@ -17179,8 +17179,14 @@ PrefabInstance:
     - target: {fileID: 2613961039358013219, guid: 9856d0a62289262448091e663e3b3063,
         type: 3}
       propertyPath: m_Name
-      value: Dog
+      value: TEST DOG
       objectReference: {fileID: 0}
+    - target: {fileID: 2613961039358013219, guid: 9856d0a62289262448091e663e3b3063,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 2613961039358013216, guid: 9856d0a62289262448091e663e3b3063,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17491,8 +17497,14 @@ PrefabInstance:
     - target: {fileID: 6754395889895443579, guid: c22a45afb01ec314188f9c44fcdf0b3b,
         type: 3}
       propertyPath: m_Name
-      value: Dad
+      value: TEST DAD
       objectReference: {fileID: 0}
+    - target: {fileID: 6754395889895443579, guid: c22a45afb01ec314188f9c44fcdf0b3b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6754395889895443574, guid: c22a45afb01ec314188f9c44fcdf0b3b,
         type: 3}
       propertyPath: m_LocalPosition.x
