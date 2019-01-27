@@ -14,7 +14,7 @@ public class waypoint : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Errors everywhere xd.
     void Update()
     {
         if (transform.position.x == wayPoints[currentWayPoint].transform.position.x) // Index out of range here???
