@@ -50,6 +50,6 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, speed);
+        transform.position = Vector2.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, speed);
     }
 }
