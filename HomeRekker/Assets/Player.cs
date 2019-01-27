@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
 
     public Camera mainCam;
 
+    public Vector2 levelTwoSpawn;
+    public Vector2 levelThreeSpawn;
+
     public GameObject bullet;
     public GameObject playerSprite;
     public Transform bulletSpawn;
@@ -23,7 +26,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        levelTwoSpawn = new Vector2(300, 10);
+        levelThreeSpawn = new Vector2(600, 10);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,13 +41,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             xVelocity += 1f;
-            direction = 1;
+            direction = 1; // Change speed if you need to
             playerSprite.transform.localScale = new Vector2(1, 1);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             xVelocity -= 1f;
-            direction = -1;
+            direction = -1; // Change speed if you need to
             playerSprite.transform.localScale = new Vector2(-1, 1);
         }
         else
@@ -82,6 +86,22 @@ public class Player : MonoBehaviour
         {
             GameObject temp = Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
             temp.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * 3000);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "houseOne")
+        {
+            this.transform.position = levelTwoSpawn;
+        }
+        else if (collision.gameObject.tag == "houseTwo")
+        {
+            this.transform.position = levelThreeSpawn;
+        }
+        else if (collision.gameObject.tag == "houseThree")
+        {
+            // Win game????
         }
     }
 }
