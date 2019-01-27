@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject[] wayPoints;
     private int currentWayPoint = 0;
-    public Rigidbody Enemy;
+    public Rigidbody enemy;
     private float speed = .1f;
     public GameObject bullet;
     public Transform bulletSpawn;
