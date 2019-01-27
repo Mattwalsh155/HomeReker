@@ -67,8 +67,24 @@ public class Player : MonoBehaviour
             player.AddForce(Vector2.up * 5000);
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shooting();
+        }
     }
 
-   
+    private void Shooting()
+    {
+        if (direction == 1)
+        {
+            GameObject temp = Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+            temp.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * 3000);
+        }
 
+        else if (direction == -1)
+        {
+            GameObject temp = Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+            temp.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * 3000);
+        }
+    }
 }
