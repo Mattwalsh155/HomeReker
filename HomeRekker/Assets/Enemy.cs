@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject[] wayPoints;
     private int currentWayPoint = 0;
-    public Rigidbody Enemy;
+    public Rigidbody enemy;
     private float speed = .1f;
     public GameObject bullet;
     public Transform bulletSpawn;
@@ -50,6 +50,6 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, speed);
+        transform.position = Vector2.MoveTowards(transform.position, wayPoints[currentWayPoint].transform.position, speed);
     }
 }
